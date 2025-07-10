@@ -45,7 +45,8 @@ No, the containers just exit. `docker compose down` will remove the containers. 
 
 ====================================================================================================================================================================================
 
-Install Docker Compose in Linux
+**Install Docker Compose in Linux**
+
 We can download the binary file for Docker Compose in the Linux machine from the following GitHub link . The latest stable version of Docker Compose is 1.29.0. We will use the curl command to download this release. 1. Let’s run the below curl command which will allow us to download the latest stable version 1.29.0 of Docker Compose.
 
 $ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -64,13 +65,15 @@ $ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 $ docker-compose --version
 
 
-Alternative Methods to install Docker Compose
+**Alternative Methods to install Docker Compose**
+
 In case you are not able to install Docker Compose using the above methods, there are two alternative methods that you can use. The first one is installing the Docker Compose tool using the pip command and the second one is installing it as a container.
 
 Method 1:
 We can easily install Docker Compose from the PyPI. However, it is recommended that if we opt for this method to install Docker Compose, we should create a virtual environment to do so because there are many conflicts between python system packages and the dependencies that Docker Compose requires. To install Docker Compose using pip, we can use the following command.
 
 $ pip install docker-compose
+
 Method 2
 The next alternative option is to install Docker Compose inside a container. We can do so using a simple bash script. To do so, we can use the following commands.
 
@@ -78,7 +81,10 @@ $ sudo curl -L --fail https://github.com/docker/compose/releases/download/1.29.0
 This will download the bash script from the GitHub link and move it to the target path. Next, we need to provide execute permissions to this.
 
 $ sudo chmod +x /usr/local/bin/docker-compose
-How to uninstall Docker Compose?
+
+
+**How to uninstall Docker Compose?**
+
 If you installed Docker Compose using the curl command, you can simply remove the docker-compose binary from the path using the following command. sudo rm /usr/local/bin/docker-compose If you had installed Docker Compose using the pip command, you can use pip uninstall command to remove it.
 
 $ pip uninstall docker-compose
