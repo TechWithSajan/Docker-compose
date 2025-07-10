@@ -43,7 +43,7 @@ docker compose down --volumes
 
 No, the containers just exit. `docker compose down` will remove the containers. The stopped container is why the counter will remain the same when runing `docker compose up` in a loop while stopping it each time, the data remains the redis container.
 
-
+====================================================================================================================================================================================
 
 Install Docker Compose in Linux
 We can download the binary file for Docker Compose in the Linux machine from the following GitHub link . The latest stable version of Docker Compose is 1.29.0. We will use the curl command to download this release. 1. Let’s run the below curl command which will allow us to download the latest stable version 1.29.0 of Docker Compose.
